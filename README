@@ -146,6 +146,31 @@ Meu portfólio pessoal.
 <footer>
   <p>© 2026 Joaquim Neto</p>
 </footer>
+<script>
 
+/* BOTÃO EMAIL */
+function enviarEmail() {
+  window.location.href = "mailto:joaquimneto.dev@gmail.com";
+}
+
+/* BOTÃO PROJETO */
+function verProjeto(nome) {
+  alert("Projeto: " + nome + " 🚀");
+}
+
+/* ANIMAÇÃO AO ROLAR */
+const elements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach((el) => observer.observe(el));
+
+</script>
 </body>
 </html>
